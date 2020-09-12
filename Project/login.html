@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utxf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voter Login</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+    	function checking()
+    	{
+        var userid=document.getElementById("userid").value;
+        var password=document.getElementById("pswd").value;
+        if(userid=="")
+          {
+            alert('Please Enter UserID');
+            return false;
+          }  
+        if(password=="")
+          {
+          alert('Please Enter Password');
+          return false;
+          }
+        else
+          return true;
+    	}
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Login</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Voter Login <small>Each Vote Counts</small></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <form id="login" action="login.php" class="well" method="post" onsubmit="return checking()">
+                  <div class="form-group">
+                    <label>User ID</label>
+                    <input type="text" class="form-control" placeholder="Enter UserID" id="userid" name="vid">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" id="pswd" name="password">
+                  </div>
+                  <button type="submit" class="btn btn-success btn-xs">Login</button>
+                  <a href="register.html">New User Register</a>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright Election, &copy; 2020</p>
+    </footer>
+  </body>
+</html>

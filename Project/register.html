@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voter Login</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+    	function checking()
+    	{
+        var name=document.getElementById("name").value;
+        var userid=document.getElementById("userid").value;
+        var password=document.getElementById("pswd").value;
+        var password1=document.getElementById("pswd1").value;
+        var address=document.getElementById("address").value;
+        var img=document.getElementById("img").value;
+        if(name=="")
+          {
+            alert('Please Enter Name');
+            return false;
+          }
+        if(userid=="")
+          {
+            alert('Please Enter UserID');
+            return false;
+          }  
+        if(password=="")
+          {
+          alert('Please Enter Password');
+          return false;
+          }
+        if(password1=="")
+          {
+          alert('Please Re enter Password');
+          return false;
+          }
+        if(address=="")
+          {
+          alert('Please Enter Address');
+          return false;
+          }
+          //if(img=="")
+          //{
+          //alert('Please Upload Picture');
+          //return false;
+          }
+          if(password!=password1)
+          {
+          alert("Password and Re-Password doesn't match");
+          return false;
+          }
+        else
+        {
+          alert("Successfully Registered, Please login");
+          return true;
+        }
+    	}
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="login.html">Login</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Voter Register <small>Each Vote Counts</small></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <form id="login" action="register.php" class="well" method="post" onsubmit="return checking()" method="post">
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Name" id="name" name="vname">
+                  </div>
+                  <div class="form-group">
+                    <label>User ID</label>
+                    <input type="text" class="form-control" placeholder="Enter UserID" id="userid" name="vid">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password" id="pswd" name="password">
+                  </div>
+                  <div class="form-group">
+                    <label>Re Enter Password</label>
+                    <input type="password" class="form-control" placeholder="Re-Password" id="pswd1" name="repassword">
+                  </div>
+                  <div class="form-group">
+                    <label>Enter Address</label>
+                    <input type="text" class="form-control" placeholder="Address" id="address" name="address">
+                  </div>
+                  <!-- <div class="form-group">
+                    <label>Upload Picture</label>
+                        <input type="file" id="img" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  </div>-->
+                  
+
+                  <button type="submit" class="btn btn-success btn-xs">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright Election, &copy; 2020</p>
+    </footer>
+  </body>
+</html>
